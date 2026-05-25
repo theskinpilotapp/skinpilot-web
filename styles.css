@@ -102,6 +102,18 @@ img {
   padding: 48px 0;
 }
 
+.features {
+  padding: 80px 24px;
+}
+
+.how-it-works {
+  padding: 80px 24px;
+}
+
+.cta-section {
+  padding: 88px 24px;
+}
+
 /* ─── Hero ────────────────────────────── */
 
 .hero {
@@ -145,7 +157,22 @@ img {
   border-radius: 20px;
   margin: 0 auto 24px;
   display: block;
-  box-shadow: 0 4px 16px rgba(212, 83, 126, 0.25);
+  background-color: white;
+  padding: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Feature icon image ─────────────── */
+
+.feature-icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  display: block;
+  background-color: white;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 /* ─── Waitlist form ───────────────────── */
@@ -325,7 +352,7 @@ img {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 60px 40px;
+  padding: 88px 24px;
   text-align: center;
 }
 
@@ -689,7 +716,10 @@ img {
   }
 
   .hero {
-    padding: 56px 20px 64px;
+    padding-top: 56px;
+    padding-bottom: 64px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .container {
@@ -701,11 +731,13 @@ img {
   }
 
   .features {
-    padding: 56px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .features-grid {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -715,7 +747,10 @@ img {
   }
 
   .how-it-works {
-    padding: 56px 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .steps-grid {
@@ -724,8 +759,12 @@ img {
   }
 
   .proof {
-    padding: 48px 24px;
-    margin: 0 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
     border-radius: 16px;
   }
 
@@ -734,7 +773,10 @@ img {
   }
 
   .cta-section {
-    padding: 64px 20px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .cta-section .form-row {
@@ -757,7 +799,10 @@ img {
   }
 
   .footer {
-    padding: 48px 20px 32px;
+    padding-top: 48px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .footer-inner {
@@ -787,19 +832,38 @@ img {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 48px 20px 56px;
+    padding-top: 48px;
+    padding-bottom: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .features {
-    padding: 48px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .how-it-works {
-    padding: 48px 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .proof {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 
   .cta-section {
-    padding: 56px 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .footer {
