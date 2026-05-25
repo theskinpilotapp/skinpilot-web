@@ -617,7 +617,88 @@ img {
 
 /* ─── Responsive ──────────────────────── */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    padding: 0 20px;
+  }
+
+  .nav-inner {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-email {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 48px 20px 60px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .container--narrow {
+    padding: 0 20px;
+  }
+
+  .features {
+    padding: 48px 0;
+  }
+
+  .features-grid {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
+
+  .how-it-works {
+    padding: 48px 20px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .proof {
+    padding: 56px 20px;
+    margin: 0 16px;
+    border-radius: 16px;
+  }
+
+  .proof-inner {
+    padding: 0;
+  }
+
+  .cta-section {
+    padding: 56px 20px;
+  }
+
+  .cta-section .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-section .btn-email {
+    width: 100%;
+    text-align: center;
+  }
+
   .waitlist-form {
     flex-direction: column;
   }
@@ -627,13 +708,8 @@ img {
     text-align: center;
   }
 
-  .proof {
-    padding: 40px 24px;
-  }
-
-  .contact-block,
-  .contact-form-section {
-    padding: 32px 24px;
+  .footer {
+    padding: 40px 20px 28px;
   }
 
   .footer-inner {
@@ -641,8 +717,87 @@ img {
     align-items: flex-start;
   }
 
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links .sep {
+    display: none;
+  }
+
+  .contact-block,
+  .contact-form-section {
+    padding: 32px 24px;
+  }
+
   .page-header {
     padding: 40px 0 28px;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .btn-email {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .proof-number {
+    font-size: 72px;
+  }
+
+  .proof-subtitle {
+    font-size: 18px;
+  }
+
+  .cta-headline {
+    font-size: 26px;
+  }
+
+  .step {
+    gap: 14px;
+  }
+
+  .step-body {
+    font-size: 15px;
+  }
+
+  .legal-page {
+    padding: 32px 20px 56px;
+  }
+
+  .support-page {
+    padding: 32px 20px 56px;
+  }
+
+  .contact-block {
+    padding: 28px 20px;
+  }
+
+  .faq-section {
+    margin: 0 0 56px;
   }
 }
