@@ -102,8 +102,24 @@ img {
   padding: 48px 0;
 }
 
+section {
+  display: block;
+}
+
+.hero,
+.features,
+.how-it-works,
+.proof,
+.cta-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .features {
   padding: 80px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #fff;
 }
 
 .how-it-works {
@@ -715,11 +731,18 @@ img {
     margin-bottom: 20px;
   }
 
+  .hero,
+  .features,
+  .how-it-works,
+  .proof,
+  .cta-section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
   .hero {
-    padding-top: 56px;
-    padding-bottom: 64px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .container {
@@ -728,11 +751,6 @@ img {
 
   .container--narrow {
     padding: 0 20px;
-  }
-
-  .features {
-    padding-top: 48px;
-    padding-bottom: 48px;
   }
 
   .features-grid {
@@ -747,10 +765,8 @@ img {
   }
 
   .how-it-works {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .steps-grid {
@@ -759,10 +775,8 @@ img {
   }
 
   .proof {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
     margin-left: 16px;
     margin-right: 16px;
     border-radius: 16px;
@@ -773,10 +787,8 @@ img {
   }
 
   .cta-section {
-    padding-top: 56px;
-    padding-bottom: 56px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .cta-section .form-row {
@@ -831,39 +843,13 @@ img {
 }
 
 @media (max-width: 480px) {
-  .hero {
-    padding-top: 48px;
-    padding-bottom: 56px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .features {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .how-it-works {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .proof {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 12px;
-    margin-right: 12px;
-  }
-
+  .hero,
+  .features,
+  .how-it-works,
+  .proof,
   .cta-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
   }
 
   .footer {
