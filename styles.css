@@ -1,0 +1,648 @@
+/* SkinPilot — shared stylesheet */
+
+:root {
+  --rose: #D4537E;
+  --teal: #1D9E75;
+  --cream: #FDF9F7;
+  --dark: #1A1A1A;
+  --border: #E8E0DC;
+  --muted: #6B6B6B;
+  --white: #FFFFFF;
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ─── Nav ─────────────────────────────── */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253, 249, 247, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wordmark {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rose);
+  letter-spacing: -0.02em;
+}
+
+.nav-contact {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.nav-contact a {
+  color: var(--muted);
+}
+
+.nav-contact a:hover {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+/* ─── Layout helpers ──────────────────── */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-sm {
+  padding: 48px 0;
+}
+
+/* ─── Hero ────────────────────────────── */
+
+.hero {
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* ─── Waitlist form ───────────────────── */
+
+.waitlist-form {
+  display: flex;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: #BCBCBC;
+}
+
+.waitlist-form input[type="email"]:focus {
+  border-color: var(--rose);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.88;
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-rose {
+  background: var(--rose);
+  color: var(--white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--rose);
+  border: 1.5px solid var(--rose);
+}
+
+.form-note {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ─── Feature cards ───────────────────── */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  border-left-width: 4px;
+}
+
+.card-rose  { border-left-color: var(--rose); }
+.card-teal  { border-left-color: var(--teal); }
+
+.card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.card p {
+  font-size: 0.925rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ─── Section headings ────────────────── */
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* ─── Steps (How it works) ────────────── */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.step {
+  position: relative;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ─── Social proof ────────────────────── */
+
+.proof {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.proof-number {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--rose);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.proof-label {
+  font-size: 1.1rem;
+  color: var(--dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.proof-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* ─── CTA band ────────────────────────── */
+
+.cta-band {
+  background: var(--rose);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.cta-band h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.cta-band p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 36px;
+}
+
+.cta-band .waitlist-form input[type="email"] {
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+
+.cta-band .waitlist-form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.cta-band .waitlist-form input[type="email"]:focus {
+  border-color: var(--white);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--rose);
+}
+
+.cta-band .form-note {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ─── Footer ──────────────────────────── */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+/* ─── Page header (inner pages) ──────── */
+
+.page-header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.page-header .updated {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ─── Prose (privacy, terms) ──────────── */
+
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 48px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  font-size: 0.975rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.prose li {
+  font-size: 0.975rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+.prose a {
+  color: var(--rose);
+  text-decoration: underline;
+}
+
+.prose strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* ─── Support page ────────────────────── */
+
+.contact-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px 40px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact-block h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.contact-block p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.contact-form-section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px 40px;
+  max-width: 620px;
+  margin: 60px auto 0;
+}
+
+.contact-form-section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.contact-form-section > p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  background: var(--cream);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--rose);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ─── Divider ─────────────────────────── */
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ─── Responsive ──────────────────────── */
+
+@media (max-width: 600px) {
+  .waitlist-form {
+    flex-direction: column;
+  }
+
+  .waitlist-form .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .proof {
+    padding: 40px 24px;
+  }
+
+  .contact-block,
+  .contact-form-section {
+    padding: 32px 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-header {
+    padding: 40px 0 28px;
+    margin-bottom: 40px;
+  }
+}
