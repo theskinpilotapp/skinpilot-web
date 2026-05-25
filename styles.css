@@ -397,6 +397,7 @@ section {
 
 /* ─── CTA band ────────────────────────── */
 
+.cta-section,
 .cta-band {
   background: var(--rose);
   padding: 80px 0;
@@ -404,6 +405,7 @@ section {
   color: var(--white);
 }
 
+.cta-section h2,
 .cta-band h2 {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800;
@@ -411,22 +413,26 @@ section {
   margin-bottom: 12px;
 }
 
+.cta-section p,
 .cta-band p {
   font-size: 1rem;
   opacity: 0.85;
   margin-bottom: 36px;
 }
 
+.cta-section .waitlist-form input[type="email"],
 .cta-band .waitlist-form input[type="email"] {
   border-color: rgba(255,255,255,0.4);
   background: rgba(255,255,255,0.15);
   color: var(--white);
 }
 
+.cta-section .waitlist-form input[type="email"]::placeholder,
 .cta-band .waitlist-form input[type="email"]::placeholder {
   color: rgba(255,255,255,0.6);
 }
 
+.cta-section .waitlist-form input[type="email"]:focus,
 .cta-band .waitlist-form input[type="email"]:focus {
   border-color: var(--white);
 }
@@ -436,6 +442,7 @@ section {
   color: var(--rose);
 }
 
+.cta-section .form-note,
 .cta-band .form-note {
   color: rgba(255,255,255,0.65);
 }
