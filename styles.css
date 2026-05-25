@@ -137,6 +137,17 @@ img {
   line-height: 1.7;
 }
 
+/* ─── Hero icon ──────────────────────── */
+
+.hero-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  margin: 0 auto 24px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(212, 83, 126, 0.25);
+}
+
 /* ─── Waitlist form ───────────────────── */
 
 .waitlist-form {
@@ -607,6 +618,36 @@ img {
   min-height: 120px;
 }
 
+/* ─── Habits list ─────────────────────── */
+
+.habits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  counter-reset: list-item;
+}
+
+.habits-list li {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.habits-list li::before {
+  content: counter(list-item) ".";
+  counter-increment: list-item;
+  color: var(--rose);
+  font-weight: 700;
+  font-size: 13px;
+  min-width: 16px;
+}
+
 /* ─── Divider ─────────────────────────── */
 
 .divider {
@@ -640,8 +681,15 @@ img {
     font-size: 12px;
   }
 
+  .hero-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+
   .hero {
-    padding: 48px 20px 60px;
+    padding: 56px 20px 64px;
   }
 
   .container {
@@ -653,13 +701,13 @@ img {
   }
 
   .features {
-    padding: 48px 0;
+    padding: 56px 0;
   }
 
   .features-grid {
     padding: 0 20px;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
 
   .feature-card {
@@ -667,7 +715,7 @@ img {
   }
 
   .how-it-works {
-    padding: 48px 20px;
+    padding: 56px 20px;
   }
 
   .steps-grid {
@@ -676,7 +724,7 @@ img {
   }
 
   .proof {
-    padding: 56px 20px;
+    padding: 48px 24px;
     margin: 0 16px;
     border-radius: 16px;
   }
@@ -686,7 +734,7 @@ img {
   }
 
   .cta-section {
-    padding: 56px 20px;
+    padding: 64px 20px;
   }
 
   .cta-section .form-row {
@@ -709,7 +757,7 @@ img {
   }
 
   .footer {
-    padding: 40px 20px 28px;
+    padding: 48px 20px 32px;
   }
 
   .footer-inner {
@@ -738,6 +786,26 @@ img {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 48px 20px 56px;
+  }
+
+  .features {
+    padding: 48px 0;
+  }
+
+  .how-it-works {
+    padding: 48px 20px;
+  }
+
+  .cta-section {
+    padding: 56px 20px;
+  }
+
+  .footer {
+    padding: 40px 20px 28px;
+  }
+
   .hero-headline {
     font-size: 32px;
     line-height: 1.15;
